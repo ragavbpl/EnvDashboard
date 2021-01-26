@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [EnvDashboard]">
+  <parameter name="ExcelFile" value="src\main\resources\EnvList.xlsx"/>
+  <parameter name="ExcelSheet" value="EnvList"/>
+  <test name="envStatus" group-by-instances="true">
+    <parameter name="ExcelFile" value="src\main\resources\EnvList.xlsx"/>
+    <parameter name="ExcelSheet" value="EnvList"/>
+    <classes>
+      <class name="DataFactory"/>
+    </classes>
+  </test> <!-- envStatus -->
+</suite> <!-- Failed suite [EnvDashboard] -->

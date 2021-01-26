@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SCPO Environment Dashboard</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!--<div class="container">
+   <div class="table-responsive">
+    <h1 align="center">SCPO Environment Dashboard</h1>
+    <br />
+    <div align="center">
+    </div>
+    <br />
+    <div id="env_dashboard">
+    </div>
+   </div>
+  </div>-->
+  <div class="wrapper">
+	
+	<h1 align="center">SCPO Environment Dashboard</h1>
+	<br />
+	
+	<div id="env_dashboard">
+	</div>
+  </div>
+        
+  
+</body>
+</html>
+
+<script>
+$(document).ready(function(){
+  $.ajax({
+   url:"file:EnvList.csv",
+   dataType:"text",
+   success:function(data)
+   {
+    var env_data = data.split(/\r?\n|\r/);
+    <!--var table_data = '<table class="table table-bordered table-striped">';-->
+    
+	var table_data = '<div class="table">';
+	for(var count = 0; count<1; count++)
+    {
+     var cell_data = env_data[count].split(",");
+     table_data += '<div class="row header">';
+     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+     {
+      if(count === 0)
+      {
+       table_data += '<div class="cell">'+cell_data[cell_count]+'</div>';
+      }
+	  else{
+	  break;
+	  }
+      
+     }
+	 table_data += '</div>';
+    }
+	
+	for(var count = 1; count<env_data.length; count++)
+    {
+     var cell_data = env_data[count].split(",");
+     table_data += '<div class="row">';
+     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+     {
+      if(cell_data[cell_count]==='UP')
+		 {
+		 table_data += '<div class="cell"><center><img src="img/green.gif" alt="UP" width="30" height="30"></center></div>';
+		 }
+				else if(cell_data[cell_count]==='DOWN'){
+				table_data += '<div class="cell"><center><img src="img/red.gif" alt="DOWN" width="30" height="30"></center></div>';
+				}
+				else if(cell_data[cell_count] === 'SHUTTING DOWN'){
+				table_data += '<div class="cell"><center><img src="img/yellow.gif" alt="SHUTTING DOWN" width="30" height="30"></center></div>';
+				}
+				else{
+				table_data += '<div class="cell">'+cell_data[cell_count]+'</div>';
+				}
+      
+     }
+	 table_data += '</div>';
+    }
+	
+    table_data += '</table>';
+    $('#env_dashboard').html(table_data);
+   }
+  });
+
+
+});
+</script>

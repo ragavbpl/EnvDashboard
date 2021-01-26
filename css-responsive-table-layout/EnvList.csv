@@ -1,0 +1,4 @@
+Env Name,Env URL,Login Username/Password,DB Connection String,DB Username/Password,Release Version,URL Reachable?,Basic Nodepool Running?,Collector Nodepool Running?,PromoWS Nodepool Running?,PromoNG Nodepool Running?,Current SCPO Build Date,Current JDA Platform Build Date,Current Install Type,Column14,Column15,
+Pep01,http://md1npdvpmpep01:8401/jda/shell/home,SuperUser/password,jdbc:oracle:oci:@MD1NPDLNXDB08:1521/PM12R2A,WWFMGR2019/wwfmgr2019,2019.1.0.0,UP,UP,SHUTTING DOWN,DOWN,UP, 20180905_2315   , 20180403_0956   , Full Installation   ,
+Primpt05,http://in2npdvprimt05:8401/jda/shell/home,SuperUser/P@55word,jdbc:oracle:oci:@MD1NPDLNXDB08:1521/PM12R2A,WWFMGR2019/WWFMGR2019,2019.1.0.0,DOWN,DOWN,DOWN,DOWN,DOWN,DOWN,DOWN,DOWN,
+Primpt03,http://in2npdvprimt03:7301/jda/shell/home,SuperUser/P@55word,jdbc:oracle:oci:@in2npdlnxdb14:1521/PRI1221A,WWFMGR2018/WWFMGR2018,2018.1.0.0,UP,DOWN,DOWN,DOWN,null, 20180830_1015   , 20180828_0629   , Partial Patch   ,

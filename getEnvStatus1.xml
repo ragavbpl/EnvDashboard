@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite thread-count="1" verbose="3" name="EnvDashboard" annotations="JDK" parallel="classes">
+
+  <test name="envStatus" group-by-instances="true">
+  	<parameter name="ExcelFile" value="src\main\resources\EnvList.xlsx"></parameter>
+  	<parameter name="ExcelSheet" value="EnvList"></parameter>
+  	<classes>
+    	<class name="DataFactory"/>
+    </classes>
+  </test>
+</suite>
+

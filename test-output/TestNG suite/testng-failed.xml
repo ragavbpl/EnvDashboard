@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="3" name="Failed suite [TestNG suite]" parallel="classes">
+  <parameter name="ExcelFile" value="EnvList.xls"/>
+  <parameter name="ExcelSheet" value="EnvList"/>
+  <listeners>
+    <listener class-name="Reporting.CustomizedReport"/>
+  </listeners>
+  <test name="envStatus(failed)" parallel="classes">
+    <parameter name="ExcelFile" value="EnvList.xls"/>
+    <parameter name="ExcelSheet" value="EnvList"/>
+    <classes>
+      <class name="test.java.MainRunner">
+        <methods>
+          <include name="login"/>
+          <include name="login"/>
+          <include name="closeBrowser"/>
+          <include name="getNodePoolStatus"/>
+          <include name="setDriver"/>
+          <include name="importGlobalVars"/>
+        </methods>
+      </class> <!-- test.java.MainRunner -->
+    </classes>
+  </test> <!-- envStatus(failed) -->
+</suite> <!-- Failed suite [TestNG suite] -->

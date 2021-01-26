@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="EnvDashboard" duration-ms="37896" started-at="2018-09-14T12:02:55Z" finished-at="2018-09-14T12:03:32Z">
+    <groups>
+    </groups>
+    <test name="envStatus" duration-ms="37896" started-at="2018-09-14T12:02:55Z" finished-at="2018-09-14T12:03:32Z">
+      <class name="MainRunner">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:MainRunner@1ddf84b8]" name="setDriver" is-config="true" duration-ms="2567" started-at="2018-09-14T17:32:55Z" finished-at="2018-09-14T17:32:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method status="PASS" signature="importGlobalVars(org.testng.ITestContext)[pri:0, instance:MainRunner@1ddf84b8]" name="importGlobalVars" is-config="true" duration-ms="1" started-at="2018-09-14T17:32:57Z" finished-at="2018-09-14T17:32:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@162be91c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- importGlobalVars -->
+        <test-method status="PASS" signature="isUrlReachable()[pri:0, instance:MainRunner@1ddf84b8]" name="isUrlReachable" duration-ms="4728" started-at="2018-09-14T17:32:57Z" finished-at="2018-09-14T17:33:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isUrlReachable -->
+        <test-method status="PASS" signature="getBuildData()[pri:1, instance:MainRunner@1ddf84b8]" name="getBuildData" duration-ms="24561" started-at="2018-09-14T17:33:02Z" depends-on-methods="MainRunner.isUrlReachable" finished-at="2018-09-14T17:33:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBuildData -->
+        <test-method status="PASS" signature="getNodePoolStatus()[pri:2, instance:MainRunner@1ddf84b8]" name="getNodePoolStatus" duration-ms="3157" started-at="2018-09-14T17:33:26Z" depends-on-methods="MainRunner.isUrlReachable" finished-at="2018-09-14T17:33:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getNodePoolStatus -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:MainRunner@1ddf84b8]" name="closeBrowser" is-config="true" duration-ms="2876" started-at="2018-09-14T17:33:30Z" finished-at="2018-09-14T17:33:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- MainRunner -->
+    </test> <!-- envStatus -->
+  </suite> <!-- EnvDashboard -->
+</testng-results>
